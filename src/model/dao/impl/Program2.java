@@ -28,6 +28,15 @@ public class Program2 {
 		List<Department> list = depDao.findAll();
 		list.forEach(dept -> System.out.println(dept));
 		
+		System.out.println();
+		
+		System.out.println("==== TEST 4: department update ====");
+		dep = depDao.findById(2);
+		dep.setName("Management");
+		depDao.update(dep);
+		System.out.println("Update completed!");
+		
+		
 	}
 	
 }
