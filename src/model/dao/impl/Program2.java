@@ -13,7 +13,7 @@ public class Program2 {
 		System.out.println("==== TEST 1: department insert ====");
 		DepartmentDao depDao = DaoFactory.createDepartmentDao();
 		Department dep = new Department(null, "IT");
-		depDao.insert(dep);
+//		depDao.insert(dep);
 		System.out.println("Inserted! new id = " + dep.getId());
 		
 		System.out.println();
@@ -36,6 +36,13 @@ public class Program2 {
 		depDao.update(dep);
 		System.out.println("Update completed!");
 		
+		System.out.println();
+		
+		System.out.println("==== TEST 5: department delete ====");
+		depDao.deleteById(9);
+		depDao.deleteById(10);
+		depDao.deleteById(11);
+		System.out.println("Delete completed!");
 		
 	}
 	
